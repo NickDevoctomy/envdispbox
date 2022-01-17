@@ -164,11 +164,11 @@ bool GetEntityStateBool(HTTPClient* http, String entityId, bool updateLastUpdate
       lastUpdatedTime = timeStringBuff;
     }
 
-    String state = doc["state"]; //!!! this isn't correct, [attributes][current]? (0/1)
+    String state = doc["state"];
     printf("Retrieved entity bool state: ");
     printf(state.c_str());
     printf("\r\n");
-    return state == "on";
+    return state == "True";
   }
   else
   {
